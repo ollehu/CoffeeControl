@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		2AB446ED12F8A588006B0090 /* libssh2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB446E812F8A588006B0090 /* libssh2.a */; };
+		53E9E45A16F4D4F300347B0F /* SSHWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E9E45916F4D4F300347B0F /* SSHWrapper.m */; };
+		53F7E9D71A5C2B1700F3C678 /* openssl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F7E9D61A5C2B1700F3C678 /* openssl.framework */; };
+		53F7E9D91A5C2DB900F3C678 /* gcrypt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F7E9D81A5C2DB900F3C678 /* gcrypt.framework */; };
+		53F7E9DB1A5C2EBD00F3C678 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F7E9DA1A5C2EBD00F3C678 /* Images.xcassets */; };
+		FD6F01141BFF42D300B6EFFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F01131BFF42D300B6EFFB /* ViewController.swift */; };
+		FD6F01181BFF43BC00B6EFFB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD6F01171BFF43BC00B6EFFB /* ViewController.xib */; };
+		FD6F011A1BFF564400B6EFFB /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD6F01191BFF564400B6EFFB /* Launch Screen.storyboard */; };
+		FD6F011C1BFF58DB00B6EFFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F011B1BFF58DB00B6EFFB /* AppDelegate.swift */; };
+		FD6F011E1BFF593700B6EFFB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6F011D1BFF593700B6EFFB /* libz.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* Coffee Contol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffee Contol.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2AB446E812F8A588006B0090 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssh2.a; path = lib/libssh2.a; sourceTree = "<group>"; };
+		2AB446F312F8A5A3006B0090 /* CoffeeControl-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "CoffeeControl-Info.plist"; path = "CoffeeControl/CoffeeControl-Info.plist"; sourceTree = "<group>"; };
+		2AB4470612F8A5CC006B0090 /* CoffeeControl_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoffeeControl_Prefix.pch; path = CoffeeControl/CoffeeControl_Prefix.pch; sourceTree = "<group>"; };
+		53E9E45816F4D4F300347B0F /* SSHWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSHWrapper.h; path = CoffeeControl/SSHWrapper.h; sourceTree = SOURCE_ROOT; };
+		53E9E45916F4D4F300347B0F /* SSHWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSHWrapper.m; path = CoffeeControl/SSHWrapper.m; sourceTree = SOURCE_ROOT; };
+		53F7E9D61A5C2B1700F3C678 /* openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = openssl.framework; sourceTree = "<group>"; };
+		53F7E9D81A5C2DB900F3C678 /* gcrypt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = gcrypt.framework; sourceTree = "<group>"; };
+		53F7E9DA1A5C2EBD00F3C678 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CoffeeControl/Images.xcassets; sourceTree = "<group>"; };
+		FD6F01121BFF42D300B6EFFB /* CoffeeControl-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CoffeeControl-Bridging-Header.h"; path = "CoffeeControl/CoffeeControl-Bridging-Header.h"; sourceTree = "<group>"; };
+		FD6F01131BFF42D300B6EFFB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = CoffeeControl/ViewController.swift; sourceTree = "<group>"; };
+		FD6F01171BFF43BC00B6EFFB /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewController.xib; path = CoffeeControl/ViewController.xib; sourceTree = "<group>"; };
+		FD6F01191BFF564400B6EFFB /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "CoffeeControl/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		FD6F011B1BFF58DB00B6EFFB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = CoffeeControl/AppDelegate.swift; sourceTree = "<group>"; };
+		FD6F011D1BFF593700B6EFFB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD6F011E1BFF593700B6EFFB /* libz.tbd in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				53F7E9D71A5C2B1700F3C678 /* openssl.framework in Frameworks */,
+				2AB446ED12F8A588006B0090 /* libssh2.a in Frameworks */,
+				53F7E9D91A5C2DB900F3C678 /* gcrypt.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Coffee Contol.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				53E9E46116F4D62500347B0F /* CoffeeControl */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FD6F01121BFF42D300B6EFFB /* CoffeeControl-Bridging-Header.h */,
+				2AB4470612F8A5CC006B0090 /* CoffeeControl_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53F7E9DA1A5C2EBD00F3C678 /* Images.xcassets */,
+				2AB446F312F8A5A3006B0090 /* CoffeeControl-Info.plist */,
+				FD6F01191BFF564400B6EFFB /* Launch Screen.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD6F011D1BFF593700B6EFFB /* libz.tbd */,
+				2AB446E812F8A588006B0090 /* libssh2.a */,
+				53F7E9D81A5C2DB900F3C678 /* gcrypt.framework */,
+				53F7E9D61A5C2B1700F3C678 /* openssl.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53E9E46116F4D62500347B0F /* CoffeeControl */ = {
+			isa = PBXGroup;
+			children = (
+				FD6F011B1BFF58DB00B6EFFB /* AppDelegate.swift */,
+				FD6F01131BFF42D300B6EFFB /* ViewController.swift */,
+				FD6F01171BFF43BC00B6EFFB /* ViewController.xib */,
+				53E9E45816F4D4F300347B0F /* SSHWrapper.h */,
+				53E9E45916F4D4F300347B0F /* SSHWrapper.m */,
+			);
+			name = CoffeeControl;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Coffee Contol */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Coffee Contol" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Coffee Contol";
+			productName = "libssh2-for-iOS";
+			productReference = 1D6058910D05DD3D006BFB54 /* Coffee Contol.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = N7W5TL8SE2;
+					};
+				};
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Coffee Contol" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Coffee Contol */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD6F011A1BFF564400B6EFFB /* Launch Screen.storyboard in Resources */,
+				53F7E9DB1A5C2EBD00F3C678 /* Images.xcassets in Resources */,
+				FD6F01181BFF43BC00B6EFFB /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD6F011C1BFF58DB00B6EFFB /* AppDelegate.swift in Sources */,
+				53E9E45A16F4D4F300347B0F /* SSHWrapper.m in Sources */,
+				FD6F01141BFF42D300B6EFFB /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CoffeeControl/CoffeeControl_Prefix.pch;
+				INFOPLIST_FILE = "CoffeeControl/CoffeeControl-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/lib\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.olle;
+				PRODUCT_NAME = "Coffee Contol";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoffeeControl/CoffeeControl-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CoffeeControl/CoffeeControl_Prefix.pch;
+				INFOPLIST_FILE = "CoffeeControl/CoffeeControl-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/lib\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.olle;
+				PRODUCT_NAME = "Coffee Contol";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoffeeControl/CoffeeControl-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ollehu@gmail.com (TX5LHRCAYL)";
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ollehu@gmail.com (TX5LHRCAYL)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Coffee Contol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Coffee Contol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

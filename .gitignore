@@ -1,0 +1,11 @@
+bin
+include
+lib
+libgcrypt-for-ios
+openssl
+src
+*.gz
+*.framework
+*.sh
+*.png
+*.json
