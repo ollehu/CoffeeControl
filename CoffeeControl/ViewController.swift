@@ -26,34 +26,49 @@ class ViewController: UIViewController {
     
     @IBAction func updateTimer(sender: AnyObject) {
         
-        let offLine = pickerToString(offPicker) + " * * * /usr/bin/python /home/pi/CoffeeControl/offCoffee.py"
-        let onLine = pickerToString(onPicker) + " * * * /usr/bin/python /home/pi/CoffeeControl/onCoffee.py"
+        let seconds = 0.1
+        let delay = seconds * Double(NSEC_PER_SEC)
+        let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         
-        do {
-            try sshWrapper.executeCommand("rm /home/pi/CoffeeControl/cronTemp")
-        }
-        catch {
-        }
+        self.presentViewController(self.alertController, animated: false, completion: nil)
         
-        do {
-            try sshWrapper.executeCommand("echo '" + offLine + "' >> /home/pi/CoffeeControl/cronTemp")
-        }
-        catch {
-        }
+        dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+            
+            let offLine = self.pickerToString(self.offPicker) + " * * * /usr/bin/python /home/pi/CoffeeControl/offCoffee.py"
+            let onLine = self.pickerToString(self.onPicker) + " * * * /usr/bin/python /home/pi/CoffeeControl/onCoffee.py"
+            
+            print(offLine)
+            print(onLine)
+            
+            do {
+                try self.sshWrapper.executeCommand("rm /home/pi/CoffeeControl/cronTemp")
+            }
+            catch {
+            }
+            
+            do {
+                try self.sshWrapper.executeCommand("echo '" + offLine + "' >> /home/pi/CoffeeControl/cronTemp")
+            }
+            catch {
+            }
+            
+            do {
+                try self.sshWrapper.executeCommand("echo '" + onLine + "' >> /home/pi/CoffeeControl/cronTemp")
+            }
+            catch {
+            }
+            
+            do {
+                try self.sshWrapper.executeCommand("sudo crontab /home/pi/CoffeeControl/cronTemp")
+            }
+            catch {
+            }
+            
+            self.refreshTimer()
+            
+        })
         
-        do {
-            try sshWrapper.executeCommand("echo '" + onLine + "' >> /home/pi/CoffeeControl/cronTemp")
-        }
-        catch {
-        }
-        
-        do {
-            try sshWrapper.executeCommand("sudo crontab /home/pi/CoffeeControl/cronTemp")
-        }
-        catch {
-        }
-        
-        refreshTimer()
+        self.dismissViewControllerAnimated(false, completion: nil)
         
         
     }
@@ -63,9 +78,9 @@ class ViewController: UIViewController {
         let seconds = 0.1
         let delay = seconds * Double(NSEC_PER_SEC)
         let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-
+        
         self.presentViewController(self.alertController, animated: false, completion: nil)
-
+        
         dispatch_after(dispatchTime, dispatch_get_main_queue(), {
             
             switch (self.onOffLight1.selectedSegmentIndex) {
@@ -95,51 +110,76 @@ class ViewController: UIViewController {
         })
         
         self.dismissViewControllerAnimated(false, completion: nil)
-
+        
     }
     
     @IBAction func light2Changed(sender: AnyObject) {
-        switch (self.onOffLight2.selectedSegmentIndex) {
-        case 0:
-            
-            do {
-                try sshWrapper.executeCommand("sudo /usr/bin/python /home/pi/CoffeeControl/onLight2.py")
-            }
-            catch {
+        
+        let seconds = 0.1
+        let delay = seconds * Double(NSEC_PER_SEC)
+        let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        
+        self.presentViewController(self.alertController, animated: false, completion: nil)
+        
+        dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+            switch (self.onOffLight2.selectedSegmentIndex) {
+            case 0:
                 
-            }
-        case 1:
-            
-            do {
-                try sshWrapper.executeCommand("sudo /usr/bin/python /home/pi/CoffeeControl/offLight2.py")
-            }
-            catch {
+                do {
+                    try self.sshWrapper.executeCommand("sudo /usr/bin/python /home/pi/CoffeeControl/onLight2.py")
+                }
+                catch {
+                    
+                }
+            case 1:
                 
+                do {
+                    try self.sshWrapper.executeCommand("sudo /usr/bin/python /home/pi/CoffeeControl/offLight2.py")
+                }
+                catch {
+                    
+                }
+                
+            default:
+                break
             }
             
-        default:
-            break
-        }
+        })
+        
+        self.dismissViewControllerAnimated(false, completion: nil)
     }
     
     @IBAction func coffeeChanged(sender: AnyObject) {
-        switch (self.onOffCoffee.selectedSegmentIndex) {
-        case 0:
-            do{
-                try sshWrapper.executeCommand("sudo /usr/bin/python /home/pi/CoffeeControl/onCoffee.py")
-            } catch {
+        
+        let seconds = 0.1
+        let delay = seconds * Double(NSEC_PER_SEC)
+        let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        
+        self.presentViewController(self.alertController, animated: false, completion: nil)
+        
+        dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+            switch (self.onOffCoffee.selectedSegmentIndex) {
+            case 0:
+                do{
+                    try self.sshWrapper.executeCommand("sudo /usr/bin/python /home/pi/CoffeeControl/onCoffee.py")
+                } catch {
+                    
+                }
+            case 1:
+                do{
+                    try self.sshWrapper.executeCommand("sudo /usr/bin/python /home/pi/CoffeeControl/offCoffee.py")
+                } catch {
+                    
+                }
                 
-            }
-        case 1:
-            do{
-                try sshWrapper.executeCommand("sudo /usr/bin/python /home/pi/CoffeeControl/offCoffee.py")
-            } catch {
-                
+            default:
+                break
             }
             
-        default:
-            break
-        }
+        })
+        
+        self.dismissViewControllerAnimated(false, completion: nil)
+        
     }
     
     
@@ -228,7 +268,24 @@ class ViewController: UIViewController {
         
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components([NSCalendarUnit.Hour, NSCalendarUnit.Minute] , fromDate: date)
+
+        var hour : String!
+        var minute : String!
         
-        return "\(components.minute) \(components.hour)"
+        if (components.minute < 10) {
+            minute = "0" + String(components.minute)
+        } else {
+            minute = String(components.minute)
+        }
+        
+        if (components.hour < 10) {
+            hour = "0" + String(components.hour)
+        } else {
+            hour = String(components.hour)
+        }
+        
+        
+        
+        return minute + " " + hour
     }
 }
