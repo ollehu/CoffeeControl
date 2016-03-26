@@ -10,9 +10,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="Coffee_Contol" customModuleProvider="target">
             <connections>
                 <outlet property="manualControls" destination="YVZ-fC-1lZ" id="TIT-IC-Imy"/>
+                <outlet property="offPicker" destination="VRw-rX-w8f" id="hzX-jI-FV6"/>
                 <outlet property="onOffCoffee" destination="E9b-un-fmI" id="dzd-Ss-niH"/>
                 <outlet property="onOffLight1" destination="Z4R-Hn-rNW" id="NS8-8h-gpG"/>
                 <outlet property="onOffLight2" destination="T5C-Tc-oxP" id="GGr-IZ-e54"/>
+                <outlet property="onPicker" destination="N6b-Po-WUb" id="IML-mB-HuC"/>
                 <outlet property="timerOffField" destination="94h-Qn-oml" id="ayz-Jb-Ebg"/>
                 <outlet property="timerOnField" destination="bb8-t9-OyY" id="Weo-h7-grx"/>
                 <outlet property="view" destination="iN0-l3-epB" id="fCU-Fg-uKn"/>
@@ -132,23 +134,25 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="coffeeOn:" destination="-1" eventType="touchUpInside" id="J6h-gI-gyW"/>
+                        <action selector="updateTimer:" destination="-1" eventType="touchUpInside" id="1ZT-m4-ZzU"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIF-YA-Kak">
-                    <rect key="frame" x="0.0" y="223" width="320" height="2"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIF-YA-Kak">
+                    <rect key="frame" x="0.0" y="223" width="320" height="1"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Gho-zE-BCQ"/>
                         <constraint firstAttribute="width" constant="320" id="xnx-y1-Xwn"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ff-V5-UwW">
-                    <rect key="frame" x="0.0" y="311" width="320" height="2"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ff-V5-UwW">
+                    <rect key="frame" x="0.0" y="312" width="320" height="1"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Bmx-GS-Qet"/>
                         <constraint firstAttribute="width" constant="320" id="WUm-xv-BUs"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -247,7 +251,7 @@
                 <constraint firstItem="0jU-aA-gin" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="gxg-lf-Ra6"/>
                 <constraint firstItem="T5C-Tc-oxP" firstAttribute="leading" secondItem="E9b-un-fmI" secondAttribute="leading" id="h6G-dy-9tf"/>
                 <constraint firstAttribute="trailing" secondItem="bb8-t9-OyY" secondAttribute="trailing" constant="41" id="hQs-kQ-BhI"/>
-                <constraint firstAttribute="bottom" secondItem="4ff-V5-UwW" secondAttribute="bottom" constant="192" id="hyg-Ou-ZLR"/>
+                <constraint firstAttribute="bottom" secondItem="4ff-V5-UwW" secondAttribute="bottom" constant="191" id="hyg-Ou-ZLR"/>
                 <constraint firstItem="ISx-yR-q1I" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="iQR-a6-6Lq"/>
                 <constraint firstItem="ISx-yR-q1I" firstAttribute="top" secondItem="uIF-YA-Kak" secondAttribute="bottom" constant="17" id="j0m-Bw-3D9"/>
                 <constraint firstItem="f09-ko-f51" firstAttribute="top" secondItem="fJJ-A7-FH0" secondAttribute="bottom" constant="64" id="jqs-lr-rzi"/>
