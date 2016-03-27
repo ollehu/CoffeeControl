@@ -36,7 +36,7 @@
 		53F7E9D81A5C2DB900F3C678 /* gcrypt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = gcrypt.framework; sourceTree = "<group>"; };
 		53F7E9DA1A5C2EBD00F3C678 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CoffeeControl/Images.xcassets; sourceTree = "<group>"; };
 		FD6F01121BFF42D300B6EFFB /* CoffeeControl-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CoffeeControl-Bridging-Header.h"; path = "CoffeeControl/CoffeeControl-Bridging-Header.h"; sourceTree = "<group>"; };
-		FD6F01131BFF42D300B6EFFB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = CoffeeControl/ViewController.swift; sourceTree = "<group>"; };
+		FD6F01131BFF42D300B6EFFB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = CoffeeControl/ViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		FD6F01171BFF43BC00B6EFFB /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewController.xib; path = CoffeeControl/ViewController.xib; sourceTree = "<group>"; };
 		FD6F01191BFF564400B6EFFB /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "CoffeeControl/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		FD6F011B1BFF58DB00B6EFFB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = CoffeeControl/AppDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +211,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -245,6 +246,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
